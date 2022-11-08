@@ -22,10 +22,11 @@ Pod::Spec.new do |s|
     :tag => "#{s.version}"
     }
     
+    s.static_framework      = true
+
     s.framework             = "UIKit"
     s.framework             = "AVFoundation"
     s.framework             = "Foundation"
- 
     
     s.source_files          = "FaceGestureDetection/**/*.{h,m,swift, storyboard}"
     s.resources             = 'FaceGestureDetection/Views/*.storyboard'
