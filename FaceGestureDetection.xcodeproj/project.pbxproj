@@ -389,6 +389,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceGestureDetection/Dependensies\\ FIles/FirebaseMLVision/Frameworks",
+					"$(PROJECT_DIR)/FaceGestureDetection/Dependensies\\ FIles/FirebaseMLVisionFaceModel/Frameworks",
+					"$(PROJECT_DIR)/FaceGestureDetection/Dependensies\\ FIles/FirebaseMLCommon/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -422,6 +428,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceGestureDetection/Dependensies\\ FIles/FirebaseMLVision/Frameworks",
+					"$(PROJECT_DIR)/FaceGestureDetection/Dependensies\\ FIles/FirebaseMLVisionFaceModel/Frameworks",
+					"$(PROJECT_DIR)/FaceGestureDetection/Dependensies\\ FIles/FirebaseMLCommon/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

@@ -18,16 +18,20 @@ Pod::Spec.new do |s|
     
     s.source                = {
     :git => "https://github.com/naeemhussainAksa/FaceGestureDetection.git",
-    :branch => 'main'
+    :branch => "main",
     :tag => "#{s.version}"
     }
     
     s.framework             = "UIKit"
-    s.framework             = "Firebase/MLVision"
-    s.framework             = "Firebase/MLVisionFaceModel"
+    s.framework             = "AVFoundation"
+    s.framework             = "Foundation"
+ 
     
     s.source_files          = "FaceGestureDetection/**/*.{h,m,swift, storyboard}"
     s.resources             = 'FaceGestureDetection/Views/*.storyboard'
+
+    s.dependency 'Firebase/MLVision'
+    s.dependency 'Firebase/MLVisionFaceModel'
     
     s.swift_version         = "5"
     
