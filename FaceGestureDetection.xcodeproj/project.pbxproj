@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D26BA1129191B540051A9E5 /* FacialGestureCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26BA1029191B540051A9E5 /* FacialGestureCameraView.swift */; };
-		3D69BBAF291920AA003418DD /* FaceGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D69BBAE291920AA003418DD /* FaceGestureViewController.swift */; };
+		3D97B64A291CCC2A009577BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D97B649291CCC2A009577BE /* Main.storyboard */; };
+		3D97B653291CCD00009577BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D97B652291CCD00009577BE /* Assets.xcassets */; };
+		3D97B65F291CCD52009577BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B655291CCD52009577BE /* ViewController.swift */; };
+		3D97B660291CCD52009577BE /* LivenessDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B656291CCD52009577BE /* LivenessDetectionViewController.swift */; };
+		3D97B661291CCD52009577BE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B657291CCD52009577BE /* BaseViewController.swift */; };
+		3D97B662291CCD52009577BE /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B658291CCD52009577BE /* IntroViewController.swift */; };
+		3D97B663291CCD52009577BE /* ScanCardBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B659291CCD52009577BE /* ScanCardBackViewController.swift */; };
+		3D97B664291CCD52009577BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B65A291CCD52009577BE /* HomeViewController.swift */; };
+		3D97B665291CCD52009577BE /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B65B291CCD52009577BE /* PopupViewController.swift */; };
+		3D97B666291CCD52009577BE /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B65C291CCD52009577BE /* SelfieViewController.swift */; };
+		3D97B667291CCD52009577BE /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B65D291CCD52009577BE /* SuccessViewController.swift */; };
+		3D97B668291CCD52009577BE /* ScanCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B65E291CCD52009577BE /* ScanCardViewController.swift */; };
+		3D97B673291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B66A291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.swift */; };
+		3D97B674291CCF35009577BE /* FacialGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B66B291CCF35009577BE /* FacialGestureView.swift */; };
+		3D97B675291CCF35009577BE /* PopupDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D97B66C291CCF35009577BE /* PopupDetailTableViewCell.xib */; };
+		3D97B676291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B66D291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.swift */; };
+		3D97B677291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D97B66E291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.xib */; };
+		3D97B678291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D97B66F291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.xib */; };
+		3D97B679291CCF35009577BE /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B670291CCF35009577BE /* FullScreenImageViewController.swift */; };
+		3D97B67A291CCF35009577BE /* PopupDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B671291CCF35009577BE /* PopupDetailTableViewCell.swift */; };
+		3D97B67B291CCF35009577BE /* FullScreenImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D97B672291CCF35009577BE /* FullScreenImageViewController.xib */; };
+		3D97B684291CD125009577BE /* PopupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B67D291CD125009577BE /* PopupModels.swift */; };
 		3DB792462919082100A8E777 /* FaceGestureDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB7923D2919082000A8E777 /* FaceGestureDetection.framework */; };
 		3DB7924B2919082100A8E777 /* FaceGestureDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7924A2919082100A8E777 /* FaceGestureDetectionTests.swift */; };
 		3DB7924C2919082100A8E777 /* FaceGestureDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB792402919082000A8E777 /* FaceGestureDetection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DB792572919136200A8E777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB792562919136200A8E777 /* Main.storyboard */; };
-		3DB7925A291919C100A8E777 /* Group 44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB79259291919C100A8E777 /* Group 44@2x.png */; };
-		3DB7925C291919EB00A8E777 /* Group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7925B291919EB00A8E777 /* Group@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,15 +45,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D26BA1029191B540051A9E5 /* FacialGestureCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialGestureCameraView.swift; sourceTree = "<group>"; };
-		3D69BBAE291920AA003418DD /* FaceGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceGestureViewController.swift; sourceTree = "<group>"; };
+		3D97B649291CCC2A009577BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3D97B652291CCD00009577BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D97B655291CCD52009577BE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D97B656291CCD52009577BE /* LivenessDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessDetectionViewController.swift; sourceTree = "<group>"; };
+		3D97B657291CCD52009577BE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3D97B658291CCD52009577BE /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		3D97B659291CCD52009577BE /* ScanCardBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCardBackViewController.swift; sourceTree = "<group>"; };
+		3D97B65A291CCD52009577BE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3D97B65B291CCD52009577BE /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		3D97B65C291CCD52009577BE /* SelfieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
+		3D97B65D291CCD52009577BE /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		3D97B65E291CCD52009577BE /* ScanCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCardViewController.swift; sourceTree = "<group>"; };
+		3D97B66A291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessDetectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3D97B66B291CCF35009577BE /* FacialGestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialGestureView.swift; sourceTree = "<group>"; };
+		3D97B66C291CCF35009577BE /* PopupDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupDetailTableViewCell.xib; sourceTree = "<group>"; };
+		3D97B66D291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessDetectionOptionsTableViewCell.swift; sourceTree = "<group>"; };
+		3D97B66E291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LivenessDetectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		3D97B66F291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LivenessDetectionOptionsTableViewCell.xib; sourceTree = "<group>"; };
+		3D97B670291CCF35009577BE /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
+		3D97B671291CCF35009577BE /* PopupDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDetailTableViewCell.swift; sourceTree = "<group>"; };
+		3D97B672291CCF35009577BE /* FullScreenImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FullScreenImageViewController.xib; sourceTree = "<group>"; };
+		3D97B67D291CD125009577BE /* PopupModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupModels.swift; sourceTree = "<group>"; };
 		3DB7923D2919082000A8E777 /* FaceGestureDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FaceGestureDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB792402919082000A8E777 /* FaceGestureDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceGestureDetection.h; sourceTree = "<group>"; };
 		3DB792452919082100A8E777 /* FaceGestureDetectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceGestureDetectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB7924A2919082100A8E777 /* FaceGestureDetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceGestureDetectionTests.swift; sourceTree = "<group>"; };
-		3DB792562919136200A8E777 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3DB79259291919C100A8E777 /* Group 44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 44@2x.png"; sourceTree = "<group>"; };
-		3DB7925B291919EB00A8E777 /* Group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +92,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D26BA1229191B8F0051A9E5 /* Controllers */ = {
+		3D97B651291CCCE9009577BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3D69BBAE291920AA003418DD /* FaceGestureViewController.swift */,
+				3D97B652291CCD00009577BE /* Assets.xcassets */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3D97B654291CCD52009577BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D97B655291CCD52009577BE /* ViewController.swift */,
+				3D97B656291CCD52009577BE /* LivenessDetectionViewController.swift */,
+				3D97B657291CCD52009577BE /* BaseViewController.swift */,
+				3D97B658291CCD52009577BE /* IntroViewController.swift */,
+				3D97B659291CCD52009577BE /* ScanCardBackViewController.swift */,
+				3D97B65A291CCD52009577BE /* HomeViewController.swift */,
+				3D97B65B291CCD52009577BE /* PopupViewController.swift */,
+				3D97B65C291CCD52009577BE /* SelfieViewController.swift */,
+				3D97B65D291CCD52009577BE /* SuccessViewController.swift */,
+				3D97B65E291CCD52009577BE /* ScanCardViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3D97B669291CCF35009577BE /* Cell & Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D97B66A291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.swift */,
+				3D97B66B291CCF35009577BE /* FacialGestureView.swift */,
+				3D97B66C291CCF35009577BE /* PopupDetailTableViewCell.xib */,
+				3D97B66D291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.swift */,
+				3D97B66E291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.xib */,
+				3D97B66F291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.xib */,
+				3D97B670291CCF35009577BE /* FullScreenImageViewController.swift */,
+				3D97B671291CCF35009577BE /* PopupDetailTableViewCell.swift */,
+				3D97B672291CCF35009577BE /* FullScreenImageViewController.xib */,
+			);
+			path = "Cell & Views";
+			sourceTree = "<group>";
+		};
+		3D97B67C291CD125009577BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D97B67D291CD125009577BE /* PopupModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3DB792332919082000A8E777 = {
@@ -88,9 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				3DB792402919082000A8E777 /* FaceGestureDetection.h */,
-				3D26BA1229191B8F0051A9E5 /* Controllers */,
-				3DB79258291914D000A8E777 /* Assests */,
+				3D97B67C291CD125009577BE /* Models */,
+				3D97B669291CCF35009577BE /* Cell & Views */,
+				3D97B654291CCD52009577BE /* Controllers */,
 				3DB792552919134F00A8E777 /* Views */,
+				3D97B651291CCCE9009577BE /* Utilities */,
 			);
 			path = FaceGestureDetection;
 			sourceTree = "<group>";
@@ -106,19 +183,9 @@
 		3DB792552919134F00A8E777 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D26BA1029191B540051A9E5 /* FacialGestureCameraView.swift */,
-				3DB792562919136200A8E777 /* Main.storyboard */,
+				3D97B649291CCC2A009577BE /* Main.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3DB79258291914D000A8E777 /* Assests */ = {
-			isa = PBXGroup;
-			children = (
-				3DB79259291919C100A8E777 /* Group 44@2x.png */,
-				3DB7925B291919EB00A8E777 /* Group@2x.png */,
-			);
-			path = Assests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DB7925C291919EB00A8E777 /* Group@2x.png in Resources */,
-				3DB792572919136200A8E777 /* Main.storyboard in Resources */,
-				3DB7925A291919C100A8E777 /* Group 44@2x.png in Resources */,
+				3D97B653291CCD00009577BE /* Assets.xcassets in Resources */,
+				3D97B677291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.xib in Resources */,
+				3D97B64A291CCC2A009577BE /* Main.storyboard in Resources */,
+				3D97B675291CCF35009577BE /* PopupDetailTableViewCell.xib in Resources */,
+				3D97B678291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.xib in Resources */,
+				3D97B67B291CCF35009577BE /* FullScreenImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +304,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D26BA1129191B540051A9E5 /* FacialGestureCameraView.swift in Sources */,
-				3D69BBAF291920AA003418DD /* FaceGestureViewController.swift in Sources */,
+				3D97B666291CCD52009577BE /* SelfieViewController.swift in Sources */,
+				3D97B663291CCD52009577BE /* ScanCardBackViewController.swift in Sources */,
+				3D97B676291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.swift in Sources */,
+				3D97B67A291CCF35009577BE /* PopupDetailTableViewCell.swift in Sources */,
+				3D97B684291CD125009577BE /* PopupModels.swift in Sources */,
+				3D97B662291CCD52009577BE /* IntroViewController.swift in Sources */,
+				3D97B65F291CCD52009577BE /* ViewController.swift in Sources */,
+				3D97B674291CCF35009577BE /* FacialGestureView.swift in Sources */,
+				3D97B661291CCD52009577BE /* BaseViewController.swift in Sources */,
+				3D97B664291CCD52009577BE /* HomeViewController.swift in Sources */,
+				3D97B668291CCD52009577BE /* ScanCardViewController.swift in Sources */,
+				3D97B673291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.swift in Sources */,
+				3D97B660291CCD52009577BE /* LivenessDetectionViewController.swift in Sources */,
+				3D97B679291CCF35009577BE /* FullScreenImageViewController.swift in Sources */,
+				3D97B667291CCD52009577BE /* SuccessViewController.swift in Sources */,
+				3D97B665291CCD52009577BE /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,8 +31,8 @@ Pod::Spec.new do |s|
     s.source_files          = "FaceGestureDetection/**/*.{h,m,swift, storyboard}"
     s.resources             = 'FaceGestureDetection/Views/*.storyboard'
 
-    s.dependency 'Firebase/MLVision'
-    s.dependency 'Firebase/MLVisionFaceModel'
+    s.dependency 'GoogleMLKit/TextRecognition'
+    s.dependency 'GoogleMLKit/FaceDetection'
     
     s.swift_version         = "5"
     

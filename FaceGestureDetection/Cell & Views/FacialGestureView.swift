@@ -1,15 +1,15 @@
 //
-//  FacialGestureCameraView.swift
-//  FaceGestureDemo
+//  FacialGestureView.swift
+//  KnowFace
 //
-//  Created by Amit Palo on 07/06/20.
-//  Copyright © 2020 Amit Palo. All rights reserved.
+//  Created by Naeem Hussain on 04/11/2022.
 //
 
 import Foundation
 import UIKit
 import AVFoundation
-import FirebaseMLVision
+import MLKitVision
+import MLKitFaceDetection
 
 /// delegates for facial gesture detection
 @objc public protocol FacialGestureCameraViewDelegate: AnyObject {
@@ -21,6 +21,10 @@ import FirebaseMLVision
     @objc optional func nodLeftDetected()
 
     @objc optional func nodRightDetected()
+    
+    @objc optional func nodUpDetected()
+    
+    @objc optional func nodDownDetected()
 
     @objc optional func leftEyeBlinkDetected()
 
@@ -35,11 +39,15 @@ public class FacialGestureCameraView: UIView {
     
     public weak var delegate: FacialGestureCameraViewDelegate?
     
-    public var leftNodThreshold: CGFloat = 20.0
+    public var leftNodThreshold: CGFloat = 35.0
     
-    public var rightNodThreshold: CGFloat = -4
+    public var rightNodThreshold: CGFloat = -35.0
     
-    public var smileProbality: CGFloat = 0.8
+    public var upNodThreshold: CGFloat = 22.5
+    
+    public var downNodThreshold: CGFloat = -22.5
+    
+    public var smileProbality: CGFloat = 0.5//0.8
     
     public var openEyeMaxProbability: CGFloat = 0.95
     
@@ -47,18 +55,15 @@ public class FacialGestureCameraView: UIView {
     
     private var restingFace: Bool = true
     
-    private lazy var vision: Vision = {
-        return Vision.vision()
-    }()
-    
-    private lazy var options: VisionFaceDetectorOptions = {
-        let option = VisionFaceDetectorOptions()
-        option.performanceMode = .accurate
-        option.landmarkMode = .none
-        option.classificationMode = .all
-        option.isTrackingEnabled = false
-        option.contourMode = .none
-        return option
+    private lazy var options: FaceDetectorOptions = {
+        
+        let faceDetectorOpt = FaceDetectorOptions()
+        faceDetectorOpt.performanceMode = .accurate
+        faceDetectorOpt.landmarkMode = .all
+        faceDetectorOpt.classificationMode = .all
+        faceDetectorOpt.isTrackingEnabled = false
+        faceDetectorOpt.contourMode = .none
+        return faceDetectorOpt
     }()
     
     private lazy var videoDataOutput: AVCaptureVideoDataOutput = {
@@ -105,6 +110,7 @@ extension FacialGestureCameraView {
         
         layer.masksToBounds = true
         layer.addSublayer(previewLayer)
+        print("Bounds of Capture device is: ", bounds)
         previewLayer.frame = bounds
         session.startRunning()
     }
@@ -125,13 +131,12 @@ extension FacialGestureCameraView: AVCaptureVideoDataOutputSampleBufferDelegate 
             return
         }
         let visionImage = VisionImage(buffer: sampleBuffer)
-        let metadata = VisionImageMetadata()
-        let visionOrientation = visionImageOrientation(from: imageOrientation())
-        metadata.orientation = visionOrientation
-        visionImage.metadata = metadata
+        visionImage.orientation = imageOrientation(
+          deviceOrientation: UIDevice.current.orientation,
+          cameraPosition: .front)
         let imageWidth = CGFloat(CVPixelBufferGetWidth(imageBuffer))
         let imageHeight = CGFloat(CVPixelBufferGetHeight(imageBuffer))
-        
+       // print("IMage size is = width:\(imageWidth), height:\(imageHeight)")
         DispatchQueue.global().async {
             self.detectFacesOnDevice(in: visionImage,
                                      width: imageWidth,
@@ -140,82 +145,31 @@ extension FacialGestureCameraView: AVCaptureVideoDataOutputSampleBufferDelegate 
         
     }
     
-    private func visionImageOrientation(from imageOrientation: UIImage.Orientation) ->
-        VisionDetectorImageOrientation {
-            switch imageOrientation {
-            case .up:
-                return .topLeft
-            case .down:
-                return .bottomRight
-            case .left:
-                return .leftBottom
-            case .right:
-                return .rightTop
-            case .upMirrored:
-                return .topRight
-            case .downMirrored:
-                return .bottomLeft
-            case .leftMirrored:
-                return .leftTop
-            case .rightMirrored:
-                return .rightBottom
-            @unknown default:
-                fatalError()
-            }
-    }
-    
-    private func imageOrientation(fromDevicePosition devicePosition: AVCaptureDevice.Position = .front) -> UIImage.Orientation {
-        var deviceOrientation = UIDevice.current.orientation
-        if deviceOrientation == .faceDown ||
-            deviceOrientation == .faceUp ||
-            deviceOrientation == .unknown {
-            deviceOrientation = currentUIOrientation()
-        }
+    private func imageOrientation(
+        deviceOrientation: UIDeviceOrientation,
+        cameraPosition: AVCaptureDevice.Position
+    ) -> UIImage.Orientation {
         switch deviceOrientation {
         case .portrait:
-            return devicePosition == .front ? .leftMirrored : .right
+            return cameraPosition == .front ? .leftMirrored : .right
         case .landscapeLeft:
-            return devicePosition == .front ? .downMirrored : .up
+            return cameraPosition == .front ? .downMirrored : .up
         case .portraitUpsideDown:
-            return devicePosition == .front ? .rightMirrored : .left
+            return cameraPosition == .front ? .rightMirrored : .left
         case .landscapeRight:
-            return devicePosition == .front ? .upMirrored : .down
+            return cameraPosition == .front ? .upMirrored : .down
         case .faceDown, .faceUp, .unknown:
             return .up
         @unknown default:
             fatalError()
         }
     }
-
-    private func currentUIOrientation() -> UIDeviceOrientation {
-        let deviceOrientation = { () -> UIDeviceOrientation in
-            switch UIApplication.shared.windows.first?.windowScene?.interfaceOrientation {
-            case .landscapeLeft:
-                return .landscapeRight
-            case .landscapeRight:
-                return .landscapeLeft
-            case .portraitUpsideDown:
-                return .portraitUpsideDown
-            case .portrait, .unknown, .none:
-                return .portrait
-            @unknown default:
-                fatalError()
-            }
-        }
-        
-        guard Thread.isMainThread else {
-            var currentOrientation: UIDeviceOrientation = .portrait
-            DispatchQueue.main.sync {
-                currentOrientation = deviceOrientation()
-            }
-            return currentOrientation
-        }
-        return deviceOrientation()
-    }
     
     private func detectFacesOnDevice(in image: VisionImage, width: CGFloat, height: CGFloat) {
         
-        let faceDetector = vision.faceDetector(options: options)
+        //let faceDetector = vision.faceDetector(options: options)
+        
+        let faceDetector = FaceDetector.faceDetector(options: options)
         faceDetector.process(image, completion: { features, error in
             
             if let error = error {
@@ -227,25 +181,29 @@ extension FacialGestureCameraView: AVCaptureVideoDataOutputSampleBufferDelegate 
                 return
             }
             
+//            print("features count is : ", features.count)
             if let face = features.first {
                 
                 let leftEyeOpenProbability = face.leftEyeOpenProbability
                 let rightEyeOpenProbability = face.rightEyeOpenProbability
                 
+                
                 // left head nod
-//                print("rightNodThreshold is : ", face.headEulerAngleZ)
-               // print("openEyeMaxProbability is : ", rightEyeOpenProbability)
-                //print("openEyeMinProbability is : ", leftEyeOpenProbability)
-//                print("smilingProbability is : ", face.smilingProbabilit
-                      
-                if face.headEulerAngleZ > self.leftNodThreshold {
+
+                
+                print("rightNodThreshold is : ", face.headEulerAngleX)
+//                print("openEyeMaxProbability is : ", rightEyeOpenProbability)
+//                print("openEyeMinProbability is : ", leftEyeOpenProbability)
+//                print("smilingProbability is : ", face.smilingProbability)
+                
+                if face.headEulerAngleY >= self.leftNodThreshold {
                     
                     if self.restingFace {
                         self.restingFace = false
                         self.delegate?.nodLeftDetected?()
                     }
                     
-                } else if face.headEulerAngleZ < self.rightNodThreshold {
+                } else if face.headEulerAngleY <= self.rightNodThreshold {
                     
                     //Right head tilt
                     if self.restingFace {
@@ -253,7 +211,19 @@ extension FacialGestureCameraView: AVCaptureVideoDataOutputSampleBufferDelegate 
                         self.delegate?.nodRightDetected?()
                     }
                     
-                } else if leftEyeOpenProbability > self.openEyeMaxProbability &&
+                } else if face.headEulerAngleX >= self.upNodThreshold {
+                    if self.restingFace {
+                        self.restingFace = false
+                        self.delegate?.nodUpDetected?()
+                    }
+                } else if face.headEulerAngleX <= self.downNodThreshold {
+                    if self.restingFace {
+                        self.restingFace = false
+                        self.delegate?.nodDownDetected?()
+                    }
+                }
+                
+                else if leftEyeOpenProbability > self.openEyeMaxProbability &&
                     rightEyeOpenProbability < self.openEyeMinProbability {
                     
                     // Right Eye Blink
@@ -297,3 +267,4 @@ extension FacialGestureCameraView: AVCaptureVideoDataOutputSampleBufferDelegate 
     }
     
 }
+

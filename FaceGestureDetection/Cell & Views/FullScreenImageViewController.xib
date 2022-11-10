@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullScreenImageViewController" customModule="KnowFace" customModuleProvider="target">
+            <connections>
+                <outlet property="fullScreenImageView" destination="Zsm-7I-fJE" id="yjR-bm-2Sk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoE-TH-Qnx">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zsm-7I-fJE">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="l6m-ah-ldS">
+                            <rect key="frame" x="97.666666666666686" y="740" width="195" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITe-TD-naI">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="VAU-yG-TV2"/>
+                                        <constraint firstAttribute="width" secondItem="ITe-TD-naI" secondAttribute="height" multiplier="1:1" id="hDc-gY-WQ3"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <state key="normal" image="success_icon"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="IaM-Mx-LIO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-jz-xtk">
+                                    <rect key="frame" x="155" y="0.0" width="40" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="kiD-jz-xtk" secondAttribute="height" multiplier="1:1" id="Jlc-dL-bFX"/>
+                                        <constraint firstAttribute="height" constant="40" id="Rus-X8-IeW"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="popup_cross"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="EXj-6G-Yay"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="kiD-jz-xtk" firstAttribute="width" secondItem="kiD-jz-xtk" secondAttribute="height" multiplier="1:1" id="tCl-9t-S9S"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Zsm-7I-fJE" firstAttribute="top" secondItem="yoE-TH-Qnx" secondAttribute="top" id="7ts-yj-Zni"/>
+                        <constraint firstItem="l6m-ah-ldS" firstAttribute="centerX" secondItem="yoE-TH-Qnx" secondAttribute="centerX" id="IRQ-at-ete"/>
+                        <constraint firstAttribute="trailing" secondItem="Zsm-7I-fJE" secondAttribute="trailing" id="PFG-6c-V3b"/>
+                        <constraint firstItem="Zsm-7I-fJE" firstAttribute="leading" secondItem="yoE-TH-Qnx" secondAttribute="leading" id="ZDw-ZV-OpR"/>
+                        <constraint firstItem="l6m-ah-ldS" firstAttribute="width" secondItem="yoE-TH-Qnx" secondAttribute="width" multiplier="0.5" id="kaj-06-JQX"/>
+                        <constraint firstAttribute="bottom" secondItem="Zsm-7I-fJE" secondAttribute="bottom" id="rCo-eV-lcj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="l6m-ah-ldS" secondAttribute="bottom" constant="30" id="CKL-lh-GqD"/>
+                <constraint firstItem="yoE-TH-Qnx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LYJ-JS-Odb"/>
+                <constraint firstAttribute="bottom" secondItem="yoE-TH-Qnx" secondAttribute="bottom" id="SpR-QU-6mi"/>
+                <constraint firstAttribute="trailing" secondItem="yoE-TH-Qnx" secondAttribute="trailing" id="chC-Ln-Oai"/>
+                <constraint firstItem="yoE-TH-Qnx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qU6-Xg-8be"/>
+            </constraints>
+            <point key="canvasLocation" x="33.846153846153847" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="popup_cross" width="16" height="16"/>
+        <image name="success_icon" width="111" height="111"/>
+    </resources>
+</document>
