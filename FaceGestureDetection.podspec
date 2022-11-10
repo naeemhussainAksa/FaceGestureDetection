@@ -10,6 +10,7 @@ Pod::Spec.new do |spec|
   spec.source        = { :git => 'https://github.com/naeemhussainAksa/FaceGestureDetection.git', :tag => '#{s.version}' }
   spec.module_name   = 'FaceGestureDetection'
   spec.swift_version = '5.0'
+  spec.static_framework = true
 
   spec.ios.deployment_target  = '13.0'
 
@@ -23,4 +24,10 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'GoogleMLKit/FaceDetection'
   spec.dependency 'GoogleMLKit/TextRecognition'
+
+  if ["GoogleMLKit/FaceDetection", "GoogleMLKit/TextRecognition"].include? target.name
+  target.build_configurations.each do |config|
+    config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+  end
+
 end
