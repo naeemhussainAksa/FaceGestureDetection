@@ -22,6 +22,7 @@ class SelfieViewController: BaseViewController {
     @IBOutlet weak var scanLayerView: UIView!
     @IBOutlet weak var similarityLabel: UILabel!
     @IBOutlet weak var directionLabel: UILabel!
+    @IBOutlet weak var directionImage: UIImageView!
     
     // MARK: - Declarations -
     
@@ -34,7 +35,9 @@ class SelfieViewController: BaseViewController {
     var randomCases = [LivenessDetectionValues]()
     var randomCaseHandeledCount = 0
     var selfImagesTOCompare = [UIImage]()
-
+    var detectioDone = false
+    var randomArray = [1, 2, 3]
+    var iteration = 0
     
     // MARK: - Controller's LifeCycle -
     
@@ -42,7 +45,8 @@ class SelfieViewController: BaseViewController {
         super.viewDidLoad()
         
         addCameraViewDelegate()
-        modeHandlings()
+        
+        iteration = randomArray.randomElement() ?? 1
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +54,8 @@ class SelfieViewController: BaseViewController {
         
         //setupCaptureSession()
         startGestureDetection()
+        
+        print("Scan layer frame is :", scanLayerView.frame)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -81,8 +87,9 @@ class SelfieViewController: BaseViewController {
             currentGoingMode = randomCases[0]
         }
         
-        directionLabel.text = currentGoingMode.rawValue
+        directionHandlings()
         similarityLabel.text = ""
+        directionLabel.text = ""
     }
     
     private func casesFullfillHandlings()
@@ -91,12 +98,72 @@ class SelfieViewController: BaseViewController {
         if (detectionModes == .random || detectionModes == .move_up_then_down || detectionModes == .tuen_left_then_right) && randomCaseHandeledCount < 2 {
             
             currentGoingMode = randomCases[randomCaseHandeledCount]
+            directionHandlings()
+        }
+        else if iteration > 0 {
+            iteration = iteration - 1
+            
+            showToast(message: detectionModes.detectionString, with: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.modeHandlings()
+            }
+        }
+        else {
+            detectioDone = true
+            
+            showToast(message: detectionModes.detectionString, with: true)
+            directionImage.image = nil
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
+//            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    private func directionHandlings()
+    {
+        if let imgName = currentGoingMode.imageName {
+            directionImage.image = UIImage(named: imgName)
+            detectioDone = false
+            imageAnimateAtPoint()
+        } else {
+            
             directionLabel.text = currentGoingMode.rawValue
             similarityLabel.text = ""
         }
-        else {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
-            self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func imageAnimateAtPoint()
+    {
+        if !detectioDone {
+            
+            var frame = directionImage.frame
+            let defaultMargin : CGFloat = 25
+            switch currentGoingMode {
+            case .turn_left:
+                frame.origin.x = frame.origin.x - defaultMargin
+            case .turn_right:
+                frame.origin.x = frame.origin.x + defaultMargin
+            case .move_up:
+                frame.origin.y = frame.origin.y - defaultMargin
+            case .move_down:
+                frame.origin.y = frame.origin.y + defaultMargin
+            default:
+                print("default")
+            }
+            
+            frameMargin(frame: frame)
+        }
+    }
+    
+    private func frameMargin(frame: CGRect)
+    {
+        let defaultMarginIs = directionImage.frame
+        
+        UIView.animate(withDuration: 0.9) {
+            self.directionImage.frame = frame
+        } completion: { success in
+            
+            self.directionImage.frame = defaultMarginIs
+            self.imageAnimateAtPoint()
         }
     }
 //    private func setupCaptureSession() {
@@ -308,14 +375,14 @@ extension SelfieViewController: FacialGestureCameraViewDelegate {
     func doubleEyeBlinkDetected()
     {
         if currentGoingMode == .blink_eyes {
-            similarityLabel.text = "Double Eye Blink Detected"
+            //similarityLabel.text = "Double Eye Blink Detected"
             casesFullfillHandlings()
         }
     }
 
     func smileDetected() {
         if currentGoingMode == .smile {
-            similarityLabel.text = "Smile Detected"
+            //similarityLabel.text = "Smile Detected"
             casesFullfillHandlings()
         }
     }
@@ -323,7 +390,7 @@ extension SelfieViewController: FacialGestureCameraViewDelegate {
     func nodLeftDetected() {
         
         if currentGoingMode == .turn_left {
-            similarityLabel.text = "Left Detected"
+            //similarityLabel.text = "Left Detected"
             casesFullfillHandlings()
         }
     }
@@ -331,7 +398,7 @@ extension SelfieViewController: FacialGestureCameraViewDelegate {
     func nodRightDetected() {
         
         if currentGoingMode == .turn_right {
-            similarityLabel.text = "Right Detected"
+            //similarityLabel.text = "Right Detected"
             casesFullfillHandlings()
         }
     }
@@ -339,18 +406,18 @@ extension SelfieViewController: FacialGestureCameraViewDelegate {
     func leftEyeBlinkDetected() {
         
         return
-        similarityLabel.text = "Left Eye Blink Detected"
+        //similarityLabel.text = "Left Eye Blink Detected"
     }
 
     func rightEyeBlinkDetected() {
         //print("Right Eye Blink Detected")
         return
-        similarityLabel.text = "Right Eye Blink Detected"
+        //similarityLabel.text = "Right Eye Blink Detected"
     }
     
     func nodUpDetected() {
         if currentGoingMode == .move_up {
-            similarityLabel.text = "Face Up Detected"
+            //similarityLabel.text = "Face Up Detected"
             casesFullfillHandlings()
         }
     }
@@ -359,9 +426,14 @@ extension SelfieViewController: FacialGestureCameraViewDelegate {
     {
         if currentGoingMode == .move_down {
             
-            similarityLabel.text = "Face down Detected"
+            //similarityLabel.text = "Face down Detected"
             casesFullfillHandlings()
         }
+    }
+    
+    func faceDetectAtPosition() {
+        self.showToast(with: true)
+        modeHandlings()
     }
     
 }

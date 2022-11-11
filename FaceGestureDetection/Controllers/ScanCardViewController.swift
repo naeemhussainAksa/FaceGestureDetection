@@ -222,9 +222,11 @@ extension ScanCardViewController : AVCapturePhotoCaptureDelegate
             self.fixOrientation(img: previewImage) { orientedImage in
                     
                 self.capturedImage = orientedImage
-                let scanVm = ScanCard()
-                scanVm.delegate = self
-                scanVm.scanCard(from: orientedImage)
+                self.inputDataDict[InputDataValues.cardBackScaned.rawValue] = orientedImage
+                self.showImageForPreview(orientedImage)
+//                let scanVm = ScanCard()
+//                scanVm.delegate = self
+//                scanVm.scanCard(from: orientedImage)
             }
 //                self.textRecognizeFromImage(image) { modelArr in
 //
@@ -276,28 +278,14 @@ extension ScanCardViewController : UIImagePickerControllerDelegate & UINavigatio
             self.fixOrientation(img: image) { orientedImage in
                             
                 self.capturedImage = orientedImage
-                let scanVm = ScanCard()
-                scanVm.delegate = self
-                scanVm.scanCard(from: orientedImage)
+                self.inputDataDict[InputDataValues.cardBackScaned.rawValue] = orientedImage
+                self.showImageForPreview(orientedImage)
+//                let scanVm = ScanCard()
+//                scanVm.delegate = self
+//                scanVm.scanCard(from: orientedImage)
             }
         }
     }
-}
-
-extension ScanCardViewController : ScanCardDelegate
-{
-    func didReceiveImage(scanedImage: UIImage) {
-        
-        self.inputDataDict[InputDataValues.cardFrontScaned.rawValue] = scanedImage
-        showImageForPreview(scanedImage)
-    }
-    
-    func didFailedWithError(error: String) {
-        
-        showImageForPreview(self.capturedImage)
-//        self.showAlert(title: "Error", message: error)
-    }
-    
     
     func showImageForPreview(_ image: UIImage)
     {
@@ -316,4 +304,37 @@ extension ScanCardViewController : ScanCardDelegate
         }
     }
 }
+
+//extension ScanCardViewController : ScanCardDelegate
+//{
+//    func didReceiveImage(scanedImage: UIImage) {
+//
+//        self.inputDataDict[InputDataValues.cardFrontScaned.rawValue] = scanedImage
+//        showImageForPreview(scanedImage)
+//    }
+//
+//    func didFailedWithError(error: String) {
+//
+//        showImageForPreview(self.capturedImage)
+////        self.showAlert(title: "Error", message: error)
+//    }
+//
+//
+//    func showImageForPreview(_ image: UIImage)
+//    {
+//        self.showFullScreenImage(image) { isDone in
+//
+//            if isDone {
+//
+//                self.inputDataDict[InputDataValues.cardFrontOrginal.rawValue] = self.capturedImage
+//
+//                DispatchQueue.main.async {
+//                    let scanVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanCardBackViewController") as! ScanCardBackViewController
+//                    scanVC.inputDataDict = self.inputDataDict
+//                    self.navigationController?.pushViewController(scanVC, animated: true)
+//                }
+//            }
+//        }
+//    }
+//}
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aGn-nu-JwQ">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -686,13 +687,14 @@ Personal Data Processing</string>
                             <constraint firstItem="gzx-TC-HZn" firstAttribute="trailing" secondItem="e8b-EK-V8V" secondAttribute="trailing" id="lyn-qc-wdF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="K3R-Tv-ITP"/>
                     <connections>
                         <outlet property="tableView" destination="Py4-AS-DJw" id="c67-TF-NqY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh8-tF-6Iv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950.76923076923072" y="1616.5876777251185"/>
+            <point key="canvasLocation" x="1880" y="1616.5876777251185"/>
         </scene>
         <!--Selfie View Controller-->
         <scene sceneID="VHK-Bh-UFk">
@@ -711,10 +713,10 @@ Personal Data Processing</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggR-nc-RiT">
-                                <rect key="frame" x="58.666666666666657" y="97.000000000000028" width="273" height="409.66666666666674"/>
+                                <rect key="frame" x="58.666666666666657" y="97" width="273" height="355"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ggR-nc-RiT" secondAttribute="height" multiplier="1:1.5" id="boU-7h-DnW"/>
+                                    <constraint firstAttribute="width" secondItem="ggR-nc-RiT" secondAttribute="height" multiplier="1:1.3" id="boU-7h-DnW"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -762,7 +764,7 @@ Personal Data Processing</string>
                                     <constraint firstItem="j0g-U7-f0S" firstAttribute="centerY" secondItem="bxL-j8-kbz" secondAttribute="centerY" id="YHh-nG-ApL"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOb-C1-WZv" userLabel="CamBtnView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOb-C1-WZv" userLabel="CamBtnView">
                                 <rect key="frame" x="165" y="720" width="60" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFt-iv-Bop">
@@ -796,7 +798,7 @@ Personal Data Processing</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isCirculer" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF3-72-kN0">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF3-72-kN0">
                                 <rect key="frame" x="250" y="730" width="40" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -814,22 +816,30 @@ Personal Data Processing</string>
                                     <action selector="rotateAction:" destination="4tQ-4J-IYS" eventType="touchUpInside" id="Idy-Yf-hZs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fit your face in the middle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRx-Fp-zob">
-                                <rect key="frame" x="131.33333333333334" y="526.66666666666663" width="127.66666666666666" height="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fit your face in the middle and set camera on face level" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRx-Fp-zob">
+                                <rect key="frame" x="59.333333333333343" y="515.66666666666663" width="271.66666666666663" height="13"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-mU-qg0">
-                                <rect key="frame" x="195" y="541.66666666666663" width="0.0" height="0.0"/>
+                                <rect key="frame" x="195" y="530.66666666666663" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jeb-zk-0eC">
+                                <rect key="frame" x="170" y="553.33333333333337" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YPZ-YR-a0M"/>
+                                    <constraint firstAttribute="width" secondItem="Jeb-zk-0eC" secondAttribute="height" multiplier="1:1" id="mN8-fK-Tb9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="klt-IT-JVX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jeb-zk-0eC" firstAttribute="centerX" secondItem="LRx-Fp-zob" secondAttribute="centerX" id="1Bo-hx-7ZV"/>
                             <constraint firstItem="LRx-Fp-zob" firstAttribute="centerX" secondItem="ggR-nc-RiT" secondAttribute="centerX" id="4Zs-N9-jac"/>
                             <constraint firstItem="cYd-1z-c7S" firstAttribute="width" secondItem="ce2-K3-zDl" secondAttribute="width" id="5u4-IK-GFs"/>
                             <constraint firstItem="8wN-Ae-asT" firstAttribute="top" secondItem="soj-JV-2kl" secondAttribute="top" id="6lm-IR-fEc"/>
@@ -839,6 +849,8 @@ Personal Data Processing</string>
                             <constraint firstItem="bOb-C1-WZv" firstAttribute="centerX" secondItem="soj-JV-2kl" secondAttribute="centerX" id="BTj-P5-8X7"/>
                             <constraint firstItem="GUE-mU-qg0" firstAttribute="centerX" secondItem="LRx-Fp-zob" secondAttribute="centerX" id="CLw-RT-ezR"/>
                             <constraint firstItem="8wN-Ae-asT" firstAttribute="trailing" secondItem="klt-IT-JVX" secondAttribute="trailing" id="DA6-9U-iLO"/>
+                            <constraint firstItem="LRx-Fp-zob" firstAttribute="centerX" secondItem="soj-JV-2kl" secondAttribute="centerX" id="DK5-uF-fTc"/>
+                            <constraint firstItem="LRx-Fp-zob" firstAttribute="centerY" secondItem="soj-JV-2kl" secondAttribute="centerY" constant="100" id="DlS-aO-YtN"/>
                             <constraint firstItem="GUE-mU-qg0" firstAttribute="top" secondItem="LRx-Fp-zob" secondAttribute="bottom" constant="2" id="Fdr-Cq-WHc"/>
                             <constraint firstItem="ggR-nc-RiT" firstAttribute="width" secondItem="klt-IT-JVX" secondAttribute="width" multiplier="0.7" id="HVM-47-Vob"/>
                             <constraint firstItem="ce2-K3-zDl" firstAttribute="top" secondItem="soj-JV-2kl" secondAttribute="top" id="LVg-7V-CVV"/>
@@ -848,6 +860,7 @@ Personal Data Processing</string>
                             <constraint firstItem="ce2-K3-zDl" firstAttribute="trailing" secondItem="klt-IT-JVX" secondAttribute="trailing" id="Z90-Dc-9d7"/>
                             <constraint firstItem="ggR-nc-RiT" firstAttribute="top" secondItem="lL2-is-aaq" secondAttribute="bottom" id="ZpK-h0-RlK"/>
                             <constraint firstItem="bxL-j8-kbz" firstAttribute="top" secondItem="klt-IT-JVX" secondAttribute="top" constant="20" id="eGz-gP-xmF"/>
+                            <constraint firstItem="Jeb-zk-0eC" firstAttribute="top" secondItem="LRx-Fp-zob" secondAttribute="bottom" constant="24.670000000000002" id="gQb-1U-MMh"/>
                             <constraint firstItem="ce2-K3-zDl" firstAttribute="leading" secondItem="klt-IT-JVX" secondAttribute="leading" id="gWQ-Gb-SWu"/>
                             <constraint firstItem="LRx-Fp-zob" firstAttribute="top" secondItem="ggR-nc-RiT" secondAttribute="bottom" constant="20" id="iYk-F4-yvZ"/>
                             <constraint firstItem="lF3-72-kN0" firstAttribute="leading" secondItem="bOb-C1-WZv" secondAttribute="trailing" constant="25" id="oF4-mo-biw"/>
@@ -860,10 +873,16 @@ Personal Data Processing</string>
                             <constraint firstItem="8wN-Ae-asT" firstAttribute="leading" secondItem="klt-IT-JVX" secondAttribute="leading" id="xJz-Od-Ity"/>
                             <constraint firstItem="lL2-is-aaq" firstAttribute="trailing" secondItem="klt-IT-JVX" secondAttribute="trailing" id="zS4-3P-qr8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ggR-nc-RiT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="cameraLayer" destination="cYd-1z-c7S" id="0kZ-Cb-1Wk"/>
                         <outlet property="cameraView" destination="ce2-K3-zDl" id="eHf-xH-1hy"/>
+                        <outlet property="directionImage" destination="Jeb-zk-0eC" id="Ce7-Xs-wgG"/>
                         <outlet property="directionLabel" destination="LRx-Fp-zob" id="Fle-Wp-4iI"/>
                         <outlet property="scanLayerView" destination="ggR-nc-RiT" id="xVo-JW-PSs"/>
                         <outlet property="similarityLabel" destination="GUE-mU-qg0" id="NJj-oE-mgw"/>
@@ -871,7 +890,7 @@ Personal Data Processing</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCe-Tz-qUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="1617"/>
+            <point key="canvasLocation" x="2690.7692307692305" y="1616.5876777251185"/>
         </scene>
         <!--Success View Controller-->
         <scene sceneID="gUU-0r-Lqb">
@@ -1291,6 +1310,23 @@ Details</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nX-NE-aWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763" y="815"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="euS-7Q-N4L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="K8c-16-sLc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UvC-rF-ZSs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hkh-8Z-6IB" kind="relationship" relationship="rootViewController" id="qlN-px-HCP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te8-TK-KIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.76923076923072" y="1616.5876777251185"/>
         </scene>
     </scenes>
     <resources>

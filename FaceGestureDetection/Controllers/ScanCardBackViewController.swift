@@ -168,34 +168,22 @@ extension ScanCardBackViewController : AVCapturePhotoCaptureDelegate
             
             self.fixOrientation(img: previewImage) { image in
                 self.capturedImage = image
-                let scanVm = ScanCard()
-                scanVm.delegate = self
-                scanVm.scanCard(from: image)
+                self.inputDataDict[InputDataValues.cardBackScaned.rawValue] = image
+                self.showImageForPreview(image)
+                
+//                let scanVm = ScanCard()
+//                scanVm.delegate = self
+//                scanVm.scanCard(from: image)
             }
         }
-    }
-}
-
-extension ScanCardBackViewController : ScanCardDelegate {
-    
-    func didReceiveImage(scanedImage: UIImage) {
-        
-        showImageForPreview(scanedImage)
-        inputDataDict[InputDataValues.cardBackScaned.rawValue] = scanedImage
-    }
-    
-    func didFailedWithError(error: String) {
-        
-        //self.showAlert(title: "Error", message: error)
-        showImageForPreview(self.capturedImage)
     }
     
     func showImageForPreview(_ image: UIImage)
     {
         self.showFullScreenImage(image) { isDone in
-            
+
             if isDone {
-                
+
                 self.inputDataDict[InputDataValues.cardBackOrginal.rawValue] = self.capturedImage
                 DispatchQueue.main.async {
                     let detectionOptVc = self.storyboard?.instantiateViewController(withIdentifier: "LivenessDetectionViewController") as! LivenessDetectionViewController
@@ -205,8 +193,39 @@ extension ScanCardBackViewController : ScanCardDelegate {
             }
         }
     }
-    
 }
+
+//extension ScanCardBackViewController : ScanCardDelegate {
+//
+//    func didReceiveImage(scanedImage: UIImage) {
+//
+//        showImageForPreview(scanedImage)
+//        inputDataDict[InputDataValues.cardBackScaned.rawValue] = scanedImage
+//    }
+//
+//    func didFailedWithError(error: String) {
+//
+//        //self.showAlert(title: "Error", message: error)
+//        showImageForPreview(self.capturedImage)
+//    }
+//
+//    func showImageForPreview(_ image: UIImage)
+//    {
+//        self.showFullScreenImage(image) { isDone in
+//
+//            if isDone {
+//
+//                self.inputDataDict[InputDataValues.cardBackOrginal.rawValue] = self.capturedImage
+//                DispatchQueue.main.async {
+//                    let detectionOptVc = self.storyboard?.instantiateViewController(withIdentifier: "LivenessDetectionViewController") as! LivenessDetectionViewController
+//                    detectionOptVc.inputDataDict = self.inputDataDict
+//                    self.navigationController?.pushViewController(detectionOptVc, animated: true)
+//                }
+//            }
+//        }
+//    }
+//
+//}
 
 //extension ScanCardBackViewController {
 //    

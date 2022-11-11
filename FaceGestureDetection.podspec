@@ -12,12 +12,11 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.0'
   spec.static_framework = true
 
-  spec.ios.deployment_target  = '13.0'
+  spec.ios.deployment_target  = '11.0'
 
   spec.source_files       = 'FaceGestureDetection/**/*.{h,m,swift, storyboard, xib}'
   spec.ios.source_files   = 'FaceGestureDetection/Views/*.storyboard', 'FaceGestureDetection/Utilities/*.xcassets' , 'FaceGestureDetection/Controllers/*.swift' , 'FaceGestureDetection/Cell & Views/*.{swift, xib}' , 'FaceGestureDetection/Models/*.swift'
 
-  spec.framework      = 'SystemConfiguration'
   spec.ios.framework  = 'UIKit'
   spec.osx.framework  = 'AVFoundation'
   spec.osx.framework  = 'Foundation'
@@ -25,9 +24,5 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMLKit/FaceDetection'
   spec.dependency 'GoogleMLKit/TextRecognition'
 
-  if ["GoogleMLKit/FaceDetection", "GoogleMLKit/TextRecognition"].include? target.name
-  target.build_configurations.each do |config|
-    config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-  end
 
 end

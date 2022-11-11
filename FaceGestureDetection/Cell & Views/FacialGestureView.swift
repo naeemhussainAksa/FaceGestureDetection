@@ -14,6 +14,8 @@ import MLKitFaceDetection
 /// delegates for facial gesture detection
 @objc public protocol FacialGestureCameraViewDelegate: AnyObject {
 
+    @objc optional func faceDetectAtPosition()
+    
     @objc optional func doubleEyeBlinkDetected()
 
     @objc optional func smileDetected()
@@ -39,13 +41,13 @@ public class FacialGestureCameraView: UIView {
     
     public weak var delegate: FacialGestureCameraViewDelegate?
     
-    public var leftNodThreshold: CGFloat = 35.0
+    public var leftNodThreshold: CGFloat = 30.0
     
-    public var rightNodThreshold: CGFloat = -35.0
+    public var rightNodThreshold: CGFloat = -30.0
     
-    public var upNodThreshold: CGFloat = 22.5
+    public var upNodThreshold: CGFloat = 20.5
     
-    public var downNodThreshold: CGFloat = -22.5
+    public var downNodThreshold: CGFloat = -20.5
     
     public var smileProbality: CGFloat = 0.5//0.8
     
@@ -54,6 +56,8 @@ public class FacialGestureCameraView: UIView {
     public var openEyeMinProbability: CGFloat = 0.1
     
     private var restingFace: Bool = true
+    
+    private var isFaceDetected : Bool = false
     
     private lazy var options: FaceDetectorOptions = {
         
@@ -97,6 +101,7 @@ public class FacialGestureCameraView: UIView {
 extension FacialGestureCameraView {
     
     func beginSession() {
+        isFaceDetected = false
         guard let captureDevice = captureDevice else { return }
         guard let deviceInput = try? AVCaptureDeviceInput(device: captureDevice) else { return }
         
@@ -181,45 +186,61 @@ extension FacialGestureCameraView: AVCaptureVideoDataOutputSampleBufferDelegate 
                 return
             }
             
-//            print("features count is : ", features.count)
             if let face = features.first {
                 
+                print("Face rect is", face.frame)
                 let leftEyeOpenProbability = face.leftEyeOpenProbability
                 let rightEyeOpenProbability = face.rightEyeOpenProbability
-                
-                
                 // left head nod
-
-                
-                print("rightNodThreshold is : ", face.headEulerAngleX)
+    
+                //print("headEulerAngleX is:", "\(face.headEulerAngleX)")
 //                print("openEyeMaxProbability is : ", rightEyeOpenProbability)
 //                print("openEyeMinProbability is : ", leftEyeOpenProbability)
 //                print("smilingProbability is : ", face.smilingProbability)
                 
+                if face.headEulerAngleX < 1 && face.headEulerAngleX > -1 {
+                    
+                    if !self.isFaceDetected {
+                        self.delegate?.faceDetectAtPosition?()
+                        self.isFaceDetected = true
+                    }
+                }
+                
                 if face.headEulerAngleY >= self.leftNodThreshold {
                     
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.nodLeftDetected?()
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.nodLeftDetected?()
+                        }
                     }
                     
                 } else if face.headEulerAngleY <= self.rightNodThreshold {
                     
                     //Right head tilt
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.nodRightDetected?()
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.nodRightDetected?()
+                        }
                     }
                     
                 } else if face.headEulerAngleX >= self.upNodThreshold {
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.nodUpDetected?()
+                    
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.nodUpDetected?()
+                        }
                     }
+                    
                 } else if face.headEulerAngleX <= self.downNodThreshold {
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.nodDownDetected?()
+                    
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.nodDownDetected?()
+                        }
                     }
                 }
                 
@@ -227,34 +248,42 @@ extension FacialGestureCameraView: AVCaptureVideoDataOutputSampleBufferDelegate 
                     rightEyeOpenProbability < self.openEyeMinProbability {
                     
                     // Right Eye Blink
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.rightEyeBlinkDetected?()
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.rightEyeBlinkDetected?()
+                        }
                     }
                     
                 } else if rightEyeOpenProbability > self.openEyeMaxProbability &&
                     leftEyeOpenProbability < self.openEyeMinProbability {
                     
                     // Left Eye Blink
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.leftEyeBlinkDetected?()
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.leftEyeBlinkDetected?()
+                        }
                     }
                     
                 } else if face.smilingProbability > self.smileProbality {
                     
                     // smile detected
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.smileDetected?()
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.smileDetected?()
+                        }
                     }
                     
                 } else if leftEyeOpenProbability < self.openEyeMinProbability && rightEyeOpenProbability < self.openEyeMinProbability {
                     
                     // full/both eye blink
-                    if self.restingFace {
-                        self.restingFace = false
-                        self.delegate?.doubleEyeBlinkDetected?()
+                    if self.isFaceDetected {
+                        if self.restingFace {
+                            self.restingFace = false
+                            self.delegate?.doubleEyeBlinkDetected?()
+                        }
                     }
                     
                 } else {
