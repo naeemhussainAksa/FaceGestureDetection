@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
-//  KnowFace
+//  FaceGestureDetectionViewController.swift
+//  FaceGestureDetection
 //
-//  Created by Naeem Hussain on 20/10/2022.
+//  Created by Naeem Hussain on 11/11/2022.
 //
 
 import UIKit
 
-class ViewController: BaseViewController {
-
+class FaceGestureDetectionViewController: BaseViewController {
+    
     
     // MARK: - LifeCycle -
     
@@ -27,4 +27,3 @@ class ViewController: BaseViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-
