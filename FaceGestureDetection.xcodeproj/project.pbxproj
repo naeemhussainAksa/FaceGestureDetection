@@ -270,7 +270,7 @@
 				3DB792392919082000A8E777 /* Sources */,
 				3DB7923A2919082000A8E777 /* Frameworks */,
 				3DB7923B2919082000A8E777 /* Resources */,
-				58A154DC677D2A3AA2E6F18E /* [CP] Copy Pods Resources */,
+				DEBD71915AB6CEA9F9D600B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,8 +289,8 @@
 				3DB792412919082100A8E777 /* Sources */,
 				3DB792422919082100A8E777 /* Frameworks */,
 				3DB792432919082100A8E777 /* Resources */,
-				5B5DD35FA3C85DE658E59AC2 /* [CP] Embed Pods Frameworks */,
-				3D91F9622CF12F1DBEB47355 /* [CP] Copy Pods Resources */,
+				C55AF40E2498522ABBAA7B54 /* [CP] Embed Pods Frameworks */,
+				D8F5EBEACDA968C329DE086C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -388,7 +388,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D91F9622CF12F1DBEB47355 /* [CP] Copy Pods Resources */ = {
+		C55AF40E2498522ABBAA7B54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8F5EBEACDA968C329DE086C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -405,7 +422,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		58A154DC677D2A3AA2E6F18E /* [CP] Copy Pods Resources */ = {
+		DEBD71915AB6CEA9F9D600B3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,23 +437,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B5DD35FA3C85DE658E59AC2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F07D4384E71E52D05FA1C863 /* [CP] Check Pods Manifest.lock */ = {
