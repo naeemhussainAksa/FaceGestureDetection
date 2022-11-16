@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.homepage      = 'https://github.com/naeemhussainAksa/FaceGestureDetection'
 
   
-  spec.source        = { :git => 'https://github.com/naeemhussainAksa/FaceGestureDetection.git', :tag => '#{s.version}' }
+  spec.source        = { :git => 'https://github.com/naeemhussainAksa/FaceGestureDetection.git', :tag => '1.0.0' }
 
   spec.static_framework = true
   spec.ios.framework  = 'UIKit'
