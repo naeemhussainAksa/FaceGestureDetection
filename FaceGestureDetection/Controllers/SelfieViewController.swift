@@ -20,8 +20,8 @@ class SelfieViewController: BaseViewController {
             }
         }
     @IBOutlet weak var scanLayerView: UIView!
-    @IBOutlet weak var similarityLabel: UILabel!
-    @IBOutlet weak var directionLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var directionImage: UIImageView!
     
     // MARK: - Declarations -
@@ -47,6 +47,7 @@ class SelfieViewController: BaseViewController {
         addCameraViewDelegate()
         
         iteration = randomArray.randomElement() ?? 1
+        noteLabel.text = "Please Verify Liveness: \(iteration) times \nNOTE:Note: Make sure to fit your face in the frame"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,7 +72,7 @@ class SelfieViewController: BaseViewController {
         currentGoingMode = detectionModes
         if detectionModes == .random {
             randomCaseHandeledCount = 0
-            var cases = LivenessDetectionValues.allCases
+            var cases = [LivenessDetectionValues.move_down, LivenessDetectionValues.move_up, LivenessDetectionValues.turn_left, LivenessDetectionValues.turn_right, LivenessDetectionValues.smile, LivenessDetectionValues.blink_eyes]
             cases.shuffle()
             randomCases = [cases[0], cases[1]]
             currentGoingMode = randomCases[0]
@@ -88,8 +89,7 @@ class SelfieViewController: BaseViewController {
         }
         
         directionHandlings()
-        similarityLabel.text = ""
-        directionLabel.text = ""
+        instructionLabel.text = currentGoingMode.instructionString
     }
     
     private func casesFullfillHandlings()
@@ -103,16 +103,21 @@ class SelfieViewController: BaseViewController {
         else if iteration > 0 {
             iteration = iteration - 1
             
-            showToast(message: detectionModes.detectionString, with: true)
+            noteLabel.text = "Please Verify Liveness: \(iteration) times \nNOTE:Note: Make sure to fit your face in the frame"
+            showToast(message: "", with: true)
+            directionImage.image = nil
+            LoaderAnimation.shared.stopAnimation(self)
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.modeHandlings()
             }
         }
         else {
             detectioDone = true
-            
-            showToast(message: detectionModes.detectionString, with: true)
+            instructionLabel.text = "Liveness Detection successful"
+            //showToast(message: detectionModes.detectionString, with: true)
             directionImage.image = nil
+            LoaderAnimation.shared.stopAnimation(self)
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
 //            self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -121,14 +126,17 @@ class SelfieViewController: BaseViewController {
     private func directionHandlings()
     {
         if let imgName = currentGoingMode.imageName {
-            directionImage.image = UIImage(named: imgName)
             detectioDone = false
-            imageAnimateAtPoint()
-        } else {
-            
-            directionLabel.text = currentGoingMode.rawValue
-            similarityLabel.text = ""
+            if let image = UIImage(named: imgName) {
+                directionImage.image = image
+                imageAnimateAtPoint()
+            }
+            else {
+                LoaderAnimation.shared.playAnimation(directionImage.frame, imgName, self)
+            }
         }
+        
+        instructionLabel.text = currentGoingMode.instructionString
     }
     
     private func imageAnimateAtPoint()
@@ -310,12 +318,12 @@ extension SelfieViewController : AVCapturePhotoCaptureDelegate {
                         
                         //                        ****************************************
                         
-                        guard let frontCardImg = self.inputDataDict[InputDataValues.cardFrontScaned.rawValue] as? UIImage else { return }
+//                        guard let frontCardImg = self.inputDataDict[InputDataValues.cardFrontScaned.rawValue] as? UIImage else { return }
                         
-                        VisionKitMethods.shared.faceDetection(frontCardImg) { detectedImg in
-                            
-                            if let img = detectedImg {
-                                print("Image found ...")
+//                        VisionKitMethods.shared.faceDetection(frontCardImg) { detectedImg in
+//
+//                            if let img = detectedImg {
+//                                print("Image found ...")
                                 
 //                                FaceMatch.shared.matchFaces(img, image) { similarity, error in
 ////
@@ -335,8 +343,8 @@ extension SelfieViewController : AVCapturePhotoCaptureDelegate {
                                 print(similarity)
                                 print("Similarity found over here ")
                                  */
-                            }
-                        }
+//                            }
+//                        }
                         
                         //                        ***********************************
                         

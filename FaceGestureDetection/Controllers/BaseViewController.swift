@@ -87,4 +87,38 @@ class BaseViewController: UIViewController {
             self.present(fullScreenVc, animated: false)
         }
     }
+    
+    func showToast(message : String = "", with doneimage: Bool = false) {
+
+        let toastLabel = UILabel(frame: CGRect(x: 20 , y:UIScreen.main.bounds.height/2 + 25    , width: UIScreen.main.bounds.width - 40, height: 60))
+        //toastLabel.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
+        toastLabel.textColor = UIColor.appColor//UIColor.white
+        let font = UIFont.poppinFont(withSize: 13)
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 4;
+        toastLabel.clipsToBounds  =  true
+        toastLabel.numberOfLines  =  2
+        var imageView = UIImageView()
+        if doneimage {
+            imageView = UIImageView(frame: CGRect(x: (UIScreen.main.bounds.width/2) - 25, y: (UIScreen.main.bounds.height/2) - 25 , width: 50, height: 50))
+            imageView.image = UIImage(named: "done")
+            self.view.addSubview(imageView)
+        }
+        if message.count > 0{
+            self.view.addSubview(toastLabel)
+        }
+        
+        
+        UIView.animate(withDuration: 1.5, delay: 0.0, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+            imageView .alpha = 0.0
+        }, completion: {(isCompleted) in
+        
+            toastLabel.removeFromSuperview()
+            imageView.removeFromSuperview()
+        })
+    }
 }

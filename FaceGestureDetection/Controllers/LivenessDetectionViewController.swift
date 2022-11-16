@@ -18,6 +18,57 @@ enum LivenessDetectionValues: String, CaseIterable {
     case smile                  = "please smile"
     case blink_eyes             = "Blink Your Eyes"
     case random                 = "Select Random"
+    
+    var imageName : String? {
+        
+        switch self {
+        case .turn_left:
+            return "left"
+        case .turn_right:
+            return "right"
+        case .tuen_left_then_right:
+            return nil
+        case .move_up:
+            return "up"
+        case .move_down:
+            return "down"
+        case .move_up_then_down:
+            return nil
+        case .smile:
+            return "smile_Animation"
+        case .blink_eyes:
+            return "blink_eyes_Animation"
+        case .random:
+            return nil
+        }
+    }
+    
+    var instructionString: String {
+        switch self {
+        case .turn_left:
+            
+            return "Slowly shake your head left"
+        case .turn_right:
+            
+            return "Slowly shake your head right"
+        case .tuen_left_then_right:
+            return "left/right \n Slowly shake your head left"
+        case .move_up:
+            
+            return "Slowly move face up"
+        case .move_down:
+            return "Slowly move face down"
+            
+        case .move_up_then_down:
+            return "Up/Down \n Slowly move face up"
+        case .smile:
+            return "Please keep smiling"
+        case .blink_eyes:
+            return "Blink your Eyes"
+        case .random:
+            return ""
+        }
+    }
 }
 
 class LivenessDetectionViewController: BaseViewController {

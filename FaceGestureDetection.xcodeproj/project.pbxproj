@@ -3,15 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D534FCF291E5E77007224F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D534FCE291E5E77007224F3 /* Main.storyboard */; };
-		3D534FD1291E5E8C007224F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D534FD0291E5E8C007224F3 /* Assets.xcassets */; };
-		3D534FD3291E5F2E007224F3 /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D534FD2291E5F2E007224F3 /* SelfieViewController.swift */; };
+		20760D1D4EB215814F93E2D0 /* Pods_FaceGestureDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0059023D932E105721FA1E92 /* Pods_FaceGestureDetection.framework */; };
 		3D534FD5291E5F4E007224F3 /* FacialGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D534FD4291E5F4E007224F3 /* FacialGestureView.swift */; };
-		3D97B660291CCD52009577BE /* LivenessDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B656291CCD52009577BE /* LivenessDetectionViewController.swift */; };
+		3D88A7F52924D1EF0040C724 /* blink_eyes_Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D88A7F32924D1EF0040C724 /* blink_eyes_Animation.json */; };
+		3D88A7F62924D1EF0040C724 /* smile_Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D88A7F42924D1EF0040C724 /* smile_Animation.json */; };
+		3D88A7F82924D2070040C724 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D88A7F72924D2070040C724 /* Main.storyboard */; };
+		3D88A7FB2924D2230040C724 /* LivenessDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88A7F92924D2230040C724 /* LivenessDetectionViewController.swift */; };
+		3D88A7FC2924D2230040C724 /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88A7FA2924D2230040C724 /* SelfieViewController.swift */; };
+		3D88A7FE2924D2330040C724 /* LoaderAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D88A7FD2924D2330040C724 /* LoaderAnimation.swift */; };
 		3D97B661291CCD52009577BE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B657291CCD52009577BE /* BaseViewController.swift */; };
 		3D97B662291CCD52009577BE /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B658291CCD52009577BE /* IntroViewController.swift */; };
 		3D97B663291CCD52009577BE /* ScanCardBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97B659291CCD52009577BE /* ScanCardBackViewController.swift */; };
@@ -37,7 +40,9 @@
 		3DB792462919082100A8E777 /* FaceGestureDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB7923D2919082000A8E777 /* FaceGestureDetection.framework */; };
 		3DB7924B2919082100A8E777 /* FaceGestureDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7924A2919082100A8E777 /* FaceGestureDetectionTests.swift */; };
 		3DB7924C2919082100A8E777 /* FaceGestureDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB792402919082000A8E777 /* FaceGestureDetection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DD3CBE12924B4B3003D3698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD3CBE02924B4B2003D3698 /* Assets.xcassets */; };
 		3DE7E2E5291E81B40057EE5C /* FaceGestureDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE7E2E4291E81B40057EE5C /* FaceGestureDetectionViewController.swift */; };
+		FBEC79687FCC4DFC4E10598B /* Pods_FaceGestureDetection_FaceGestureDetectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1B9ED32F74AC6A335FB9 /* Pods_FaceGestureDetection_FaceGestureDetectionTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +56,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D534FCE291E5E77007224F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3D534FD0291E5E8C007224F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D534FD2291E5F2E007224F3 /* SelfieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
+		0059023D932E105721FA1E92 /* Pods_FaceGestureDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceGestureDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0376E0A0B25D2F6CC8578F75 /* Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig"; path = "Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig"; sourceTree = "<group>"; };
+		245AEEECF15EFB07A243D5F1 /* Pods-FaceGestureDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDetection.release.xcconfig"; path = "Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection.release.xcconfig"; sourceTree = "<group>"; };
 		3D534FD4291E5F4E007224F3 /* FacialGestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialGestureView.swift; sourceTree = "<group>"; };
-		3D97B656291CCD52009577BE /* LivenessDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessDetectionViewController.swift; sourceTree = "<group>"; };
+		3D88A7F32924D1EF0040C724 /* blink_eyes_Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blink_eyes_Animation.json; sourceTree = "<group>"; };
+		3D88A7F42924D1EF0040C724 /* smile_Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smile_Animation.json; sourceTree = "<group>"; };
+		3D88A7F72924D2070040C724 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3D88A7F92924D2230040C724 /* LivenessDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivenessDetectionViewController.swift; sourceTree = "<group>"; };
+		3D88A7FA2924D2230040C724 /* SelfieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
+		3D88A7FD2924D2330040C724 /* LoaderAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderAnimation.swift; sourceTree = "<group>"; };
 		3D97B657291CCD52009577BE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3D97B658291CCD52009577BE /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		3D97B659291CCD52009577BE /* ScanCardBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCardBackViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +92,11 @@
 		3DB792402919082000A8E777 /* FaceGestureDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceGestureDetection.h; sourceTree = "<group>"; };
 		3DB792452919082100A8E777 /* FaceGestureDetectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceGestureDetectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB7924A2919082100A8E777 /* FaceGestureDetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceGestureDetectionTests.swift; sourceTree = "<group>"; };
+		3DD3CBE02924B4B2003D3698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DE7E2E4291E81B40057EE5C /* FaceGestureDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceGestureDetectionViewController.swift; sourceTree = "<group>"; };
+		4EBB1B9ED32F74AC6A335FB9 /* Pods_FaceGestureDetection_FaceGestureDetectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceGestureDetection_FaceGestureDetectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		991B9943A74FAD1FD8BEDA41 /* Pods-FaceGestureDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDetection.debug.xcconfig"; path = "Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection.debug.xcconfig"; sourceTree = "<group>"; };
+		9F6A307ECA57DBDB9EC47EC6 /* Pods-FaceGestureDetection-FaceGestureDetectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDetection-FaceGestureDetectionTests.debug.xcconfig"; path = "Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20760D1D4EB215814F93E2D0 /* Pods_FaceGestureDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DB792462919082100A8E777 /* FaceGestureDetection.framework in Frameworks */,
+				FBEC79687FCC4DFC4E10598B /* Pods_FaceGestureDetection_FaceGestureDetectionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +123,7 @@
 		3D97B651291CCCE9009577BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3D534FD0291E5E8C007224F3 /* Assets.xcassets */,
+				3DD3CBE02924B4B2003D3698 /* Assets.xcassets */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -116,12 +132,12 @@
 			isa = PBXGroup;
 			children = (
 				3DE7E2E4291E81B40057EE5C /* FaceGestureDetectionViewController.swift */,
-				3D97B656291CCD52009577BE /* LivenessDetectionViewController.swift */,
 				3D97B657291CCD52009577BE /* BaseViewController.swift */,
 				3D97B658291CCD52009577BE /* IntroViewController.swift */,
+				3D88A7F92924D2230040C724 /* LivenessDetectionViewController.swift */,
+				3D88A7FA2924D2230040C724 /* SelfieViewController.swift */,
 				3D97B659291CCD52009577BE /* ScanCardBackViewController.swift */,
 				3D97B65A291CCD52009577BE /* HomeViewController.swift */,
-				3D534FD2291E5F2E007224F3 /* SelfieViewController.swift */,
 				3D97B65B291CCD52009577BE /* PopupViewController.swift */,
 				3D97B65D291CCD52009577BE /* SuccessViewController.swift */,
 				3D97B65E291CCD52009577BE /* ScanCardViewController.swift */,
@@ -133,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				3D534FD4291E5F4E007224F3 /* FacialGestureView.swift */,
+				3D88A7FD2924D2330040C724 /* LoaderAnimation.swift */,
 				3D97B66A291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.swift */,
 				3D97B66C291CCF35009577BE /* PopupDetailTableViewCell.xib */,
 				3D97B66D291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.swift */,
@@ -165,6 +182,8 @@
 				3DB7923F2919082000A8E777 /* FaceGestureDetection */,
 				3DB792492919082100A8E777 /* FaceGestureDetectionTests */,
 				3DB7923E2919082000A8E777 /* Products */,
+				E968EB6CB4ABFDB617940F93 /* Pods */,
+				85C186FCFF1B3A7B66167645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,9 +220,31 @@
 		3DB792552919134F00A8E777 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D534FCE291E5E77007224F3 /* Main.storyboard */,
+				3D88A7F32924D1EF0040C724 /* blink_eyes_Animation.json */,
+				3D88A7F42924D1EF0040C724 /* smile_Animation.json */,
+				3D88A7F72924D2070040C724 /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		85C186FCFF1B3A7B66167645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0059023D932E105721FA1E92 /* Pods_FaceGestureDetection.framework */,
+				4EBB1B9ED32F74AC6A335FB9 /* Pods_FaceGestureDetection_FaceGestureDetectionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E968EB6CB4ABFDB617940F93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				991B9943A74FAD1FD8BEDA41 /* Pods-FaceGestureDetection.debug.xcconfig */,
+				245AEEECF15EFB07A243D5F1 /* Pods-FaceGestureDetection.release.xcconfig */,
+				9F6A307ECA57DBDB9EC47EC6 /* Pods-FaceGestureDetection-FaceGestureDetectionTests.debug.xcconfig */,
+				0376E0A0B25D2F6CC8578F75 /* Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DB7924F2919082100A8E777 /* Build configuration list for PBXNativeTarget "FaceGestureDetection" */;
 			buildPhases = (
+				1B1BA69EC826364EF5301337 /* [CP] Check Pods Manifest.lock */,
 				3DB792382919082000A8E777 /* Headers */,
 				3DB792392919082000A8E777 /* Sources */,
 				3DB7923A2919082000A8E777 /* Frameworks */,
 				3DB7923B2919082000A8E777 /* Resources */,
+				534B2921CDA8E9C298ECBA85 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DB792522919082100A8E777 /* Build configuration list for PBXNativeTarget "FaceGestureDetectionTests" */;
 			buildPhases = (
+				F07D4384E71E52D05FA1C863 /* [CP] Check Pods Manifest.lock */,
 				3DB792412919082100A8E777 /* Sources */,
 				3DB792422919082100A8E777 /* Frameworks */,
 				3DB792432919082100A8E777 /* Resources */,
+				F6BE37827586303F6EE241D2 /* [CP] Embed Pods Frameworks */,
+				7555A6AA8B4669EAFB50779C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,7 +322,7 @@
 				};
 			};
 			buildConfigurationList = 3DB792372919082000A8E777 /* Build configuration list for PBXProject "FaceGestureDetection" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -300,10 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D97B677291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.xib in Resources */,
-				3D534FCF291E5E77007224F3 /* Main.storyboard in Resources */,
 				3D97B675291CCF35009577BE /* PopupDetailTableViewCell.xib in Resources */,
 				3D97B678291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.xib in Resources */,
-				3D534FD1291E5E8C007224F3 /* Assets.xcassets in Resources */,
+				3D88A7F82924D2070040C724 /* Main.storyboard in Resources */,
+				3D88A7F52924D1EF0040C724 /* blink_eyes_Animation.json in Resources */,
+				3D88A7F62924D1EF0040C724 /* smile_Animation.json in Resources */,
+				3DD3CBE12924B4B3003D3698 /* Assets.xcassets in Resources */,
 				3D97B67B291CCF35009577BE /* FullScreenImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +364,104 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B1BA69EC826364EF5301337 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceGestureDetection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		534B2921CDA8E9C298ECBA85 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7555A6AA8B4669EAFB50779C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F07D4384E71E52D05FA1C863 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceGestureDetection-FaceGestureDetectionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6BE37827586303F6EE241D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DB792392919082000A8E777 /* Sources */ = {
@@ -336,11 +482,12 @@
 				3D97B664291CCD52009577BE /* HomeViewController.swift in Sources */,
 				3D97B668291CCD52009577BE /* ScanCardViewController.swift in Sources */,
 				3D97B673291CCF35009577BE /* LivenessDetectionHeaderTableViewCell.swift in Sources */,
-				3D97B660291CCD52009577BE /* LivenessDetectionViewController.swift in Sources */,
 				3DE7E2E5291E81B40057EE5C /* FaceGestureDetectionViewController.swift in Sources */,
-				3D534FD3291E5F2E007224F3 /* SelfieViewController.swift in Sources */,
+				3D88A7FE2924D2330040C724 /* LoaderAnimation.swift in Sources */,
 				3D97B679291CCF35009577BE /* FullScreenImageViewController.swift in Sources */,
+				3D88A7FC2924D2230040C724 /* SelfieViewController.swift in Sources */,
 				3D97B667291CCD52009577BE /* SuccessViewController.swift in Sources */,
+				3D88A7FB2924D2230040C724 /* LivenessDetectionViewController.swift in Sources */,
 				3D97B91B291D0902009577BE /* UIFont.swift in Sources */,
 				3D97B665291CCD52009577BE /* PopupViewController.swift in Sources */,
 				3D97B913291D0438009577BE /* Extensions.swift in Sources */,
@@ -488,6 +635,7 @@
 		};
 		3DB792502919082100A8E777 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 991B9943A74FAD1FD8BEDA41 /* Pods-FaceGestureDetection.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,7 +658,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,6 +680,7 @@
 		};
 		3DB792512919082100A8E777 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 245AEEECF15EFB07A243D5F1 /* Pods-FaceGestureDetection.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -554,7 +703,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,6 +724,7 @@
 		};
 		3DB792532919082100A8E777 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6A307ECA57DBDB9EC47EC6 /* Pods-FaceGestureDetection-FaceGestureDetectionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -592,6 +742,7 @@
 		};
 		3DB792542919082100A8E777 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0376E0A0B25D2F6CC8578F75 /* Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
