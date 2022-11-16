@@ -270,7 +270,7 @@
 				3DB792392919082000A8E777 /* Sources */,
 				3DB7923A2919082000A8E777 /* Frameworks */,
 				3DB7923B2919082000A8E777 /* Resources */,
-				CF772E5CF7D94B24B5D37D4B /* [CP] Copy Pods Resources */,
+				FC4D06F3D2BE63A58FBB157B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,8 +289,8 @@
 				3DB792412919082100A8E777 /* Sources */,
 				3DB792422919082100A8E777 /* Frameworks */,
 				3DB792432919082100A8E777 /* Resources */,
-				F19932BA91F767084B17625E /* [CP] Embed Pods Frameworks */,
-				081A3CD0BA2EB169E08C5D5E /* [CP] Copy Pods Resources */,
+				0507CFD574F3AE9C537036FE /* [CP] Embed Pods Frameworks */,
+				A23010F58260E8EEF9996192 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,21 +366,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		081A3CD0BA2EB169E08C5D5E /* [CP] Copy Pods Resources */ = {
+		0507CFD574F3AE9C537036FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1B1BA69EC826364EF5301337 /* [CP] Check Pods Manifest.lock */ = {
@@ -405,21 +405,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF772E5CF7D94B24B5D37D4B /* [CP] Copy Pods Resources */ = {
+		A23010F58260E8EEF9996192 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F07D4384E71E52D05FA1C863 /* [CP] Check Pods Manifest.lock */ = {
@@ -444,21 +444,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F19932BA91F767084B17625E /* [CP] Embed Pods Frameworks */ = {
+		FC4D06F3D2BE63A58FBB157B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
