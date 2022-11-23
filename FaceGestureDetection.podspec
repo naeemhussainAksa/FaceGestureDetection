@@ -2,14 +2,14 @@
 
 Pod::Spec.new do |spec|
 
-  spec.ios.deployment_target  = '13.0'
+  spec.ios.deployment_target  = '10.0'
   spec.name          = 'FaceGestureDetection'
   spec.summary       = 'Face Gesture detection application using Firebase MLKit'
   spec.requires_arc  = true
 
 
   spec.version       = '1.0.0'
-
+  spec.platform      = :ios, "13.0"
 
   spec.license       = { :type => "MIT", :file => "LICENSE" }
   spec.authors       = { 'AKSA' => 'naeem.hussain@axabiztech.com' } 
@@ -24,14 +24,13 @@ Pod::Spec.new do |spec|
   spec.ios.framework  = 'AVFoundation'
   spec.ios.framework  = 'Foundation'
 
-  spec.dependency 'GoogleMLKit/FaceDetection'
-  spec.dependency 'GoogleMLKit/TextRecognition'
-  
-
   spec.source_files       = 'FaceGestureDetection/**/*.{swift}'
   spec.resources   = 'FaceGestureDetection/**/*.{storyboard,xib,xcassets,json,mlmodel}'
 
   spec.swift_version = '5.0'
+
+  spec.dependency 'GoogleMLKit/FaceDetection'
+  spec.dependency 'GoogleMLKit/TextRecognition'
  
 
 end

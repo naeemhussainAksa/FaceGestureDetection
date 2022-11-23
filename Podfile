@@ -7,6 +7,10 @@ target 'FaceGestureDetection' do
 
   # Pods for FaceGestureDetection
 
+  pod 'GoogleMLKit/FaceDetection'
+  pod 'GoogleMLKit/TextRecognition'
+  pod 'lottie-ios'
+
   post_install do |installer|
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
@@ -14,10 +18,6 @@ target 'FaceGestureDetection' do
       end
     end
   end
-
-  pod 'GoogleMLKit/FaceDetection'
-  pod 'GoogleMLKit/TextRecognition'
-  pod 'lottie-ios'
 
   target 'FaceGestureDetectionTests' do
     # Pods for testing

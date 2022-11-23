@@ -27,7 +27,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuh-p0-MUt">
-                                <rect key="frame" x="19.999999999999986" y="628.66666666666663" width="247.66666666666663" height="101"/>
+                                <rect key="frame" x="19.999999999999986" y="645.66666666666663" width="217.66666666666663" height="84"/>
                                 <string key="text">Face Identity 
 Verification    </string>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="36"/>
@@ -123,7 +123,7 @@ Verification    </string>
         <!--Scan Card View Controller-->
         <scene sceneID="4qX-Pd-Lu4">
             <objects>
-                <viewController storyboardIdentifier="ScanCardViewController" id="boK-fm-MGe" customClass="ScanCardViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanCardViewController" id="boK-fm-MGe" customClass="ScanCardViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BNR-gq-bGp">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,16 +152,16 @@ Verification    </string>
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGT-t3-cwz" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="97"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="92.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBu-i9-1Pn">
-                                        <rect key="frame" x="118" y="67" width="154" height="28"/>
+                                        <rect key="frame" x="127.33333333333333" y="67" width="135.66666666666669" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAb-UD-0Jt">
-                                        <rect key="frame" x="16" y="66" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="63.666666666666657" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1eR-Uj-Vtm"/>
                                             <constraint firstAttribute="width" secondItem="NAb-UD-0Jt" secondAttribute="height" multiplier="1:1" id="8Ck-k6-YvH"/>
@@ -182,13 +182,13 @@ Verification    </string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Front Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O57-Zg-ffi">
-                                <rect key="frame" x="124.66666666666667" y="254.33333333333334" width="140.66666666666663" height="25.333333333333343"/>
+                                <rect key="frame" x="131.33333333333334" y="258.66666666666669" width="127.33333333333334" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place your  card within the frame and make sure it's clear with no reflections." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-uX-lav">
-                                <rect key="frame" x="59" y="564.33333333333337" width="272" height="31"/>
+                                <rect key="frame" x="59" y="564.33333333333337" width="272" height="25.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -294,7 +294,7 @@ Verification    </string>
         <!--Intro View Controller-->
         <scene sceneID="WFO-0z-PQz">
             <objects>
-                <viewController storyboardIdentifier="IntroViewController" id="Sm9-yL-YiM" customClass="IntroViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroViewController" id="Sm9-yL-YiM" customClass="IntroViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tra-cv-y3F">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,7 +354,7 @@ Verification    </string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k9-NG-30w">
-                                <rect key="frame" x="19.999999999999986" y="628.66666666666663" width="240.66666666666663" height="101"/>
+                                <rect key="frame" x="20" y="645.66666666666663" width="214.33333333333334" height="84"/>
                                 <string key="text">Doc. Identity 
 Verification       </string>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="36"/>
@@ -389,7 +389,7 @@ Verification       </string>
         <!--Home View Controller-->
         <scene sceneID="tl3-Bg-GKl">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="1y8-a9-7NV" customClass="HomeViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="1y8-a9-7NV" customClass="HomeViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kwb-F1-Oli">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,34 +415,34 @@ Verification       </string>
                                 <rect key="frame" x="0.0" y="127" width="390" height="717"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Identity Verfication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCt-fH-UtN">
-                                        <rect key="frame" x="16" y="50" width="358" height="28"/>
+                                        <rect key="frame" x="16" y="50" width="358" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It will only take about 2 minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXO-pV-EQf">
-                                        <rect key="frame" x="16" y="82" width="358" height="17"/>
+                                        <rect key="frame" x="16" y="77.333333333333343" width="358" height="14"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                         <color key="textColor" name="secondary_label"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ms6-KT-Dtr" userLabel="MiddleView">
-                                        <rect key="frame" x="0.0" y="99" width="390" height="534.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="91.333333333333314" width="390" height="547.66666666666674"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="vL5-cl-MqE">
-                                                <rect key="frame" x="20" y="97.666666666666686" width="350" height="239"/>
+                                                <rect key="frame" x="20" y="104.33333333333334" width="350" height="239.00000000000003"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzF-UL-GEu" userLabel="id_View">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="107"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Card. Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTb-24-iKe">
-                                                                <rect key="frame" x="16" y="30" width="240" height="26"/>
+                                                                <rect key="frame" x="16" y="30" width="240" height="29"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo of your ID card" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKn-jS-I0f">
-                                                                <rect key="frame" x="16" y="60" width="240" height="17"/>
+                                                                <rect key="frame" x="16" y="63" width="240" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                 <color key="textColor" name="secondary_label"/>
                                                                 <nil key="highlightedColor"/>
@@ -494,13 +494,13 @@ Verification       </string>
                                                         <rect key="frame" x="0.0" y="132" width="350" height="107"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passport Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLv-9Q-CIP">
-                                                                <rect key="frame" x="16" y="30" width="240" height="26"/>
+                                                                <rect key="frame" x="16" y="30" width="240" height="29"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo of your passport" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oia-CX-wIR">
-                                                                <rect key="frame" x="16" y="59.999999999999943" width="240" height="17"/>
+                                                                <rect key="frame" x="16" y="62.999999999999943" width="240" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                 <color key="textColor" name="secondary_label"/>
                                                                 <nil key="highlightedColor"/>
@@ -559,7 +559,7 @@ Verification       </string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObF-Qi-gqh">
-                                        <rect key="frame" x="25" y="633.33333333333337" width="340" height="33.666666666666629"/>
+                                        <rect key="frame" x="25" y="639" width="340" height="28"/>
                                         <string key="text">By tapping start button, you accept your  Consent to
 Personal Data Processing</string>
                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
@@ -610,10 +610,10 @@ Personal Data Processing</string>
             </objects>
             <point key="canvasLocation" x="2523.0769230769229" y="3.5545023696682461"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Face Gestures Controller-->
         <scene sceneID="nyK-7c-C1r">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aGn-nu-JwQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FaceGesturesController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aGn-nu-JwQ" customClass="FaceGesturesController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nIA-FC-JPr">
                         <autoresizingMask key="autoresizingMask"/>
@@ -630,7 +630,7 @@ Personal Data Processing</string>
         <!--Liveness Detection View Controller-->
         <scene sceneID="Kgy-3W-sIc">
             <objects>
-                <viewController storyboardIdentifier="LivenessDetectionViewController" id="Hkh-8Z-6IB" customClass="LivenessDetectionViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LivenessDetectionViewController" id="Hkh-8Z-6IB" customClass="LivenessDetectionViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YgB-cW-VBa">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -699,12 +699,12 @@ Personal Data Processing</string>
         <!--Selfie View Controller-->
         <scene sceneID="VHK-Bh-UFk">
             <objects>
-                <viewController storyboardIdentifier="SelfieViewController" id="4tQ-4J-IYS" customClass="SelfieViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelfieViewController" id="4tQ-4J-IYS" customClass="SelfieViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="soj-JV-2kl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ce2-K3-zDl" customClass="FacialGestureCameraView" customModule="KnowFace" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ce2-K3-zDl" customClass="FacialGestureCameraView" customModule="FaceGestureDetection" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -735,7 +735,7 @@ Personal Data Processing</string>
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="97"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take A Selfie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxL-j8-kbz">
-                                        <rect key="frame" x="131" y="67" width="128" height="28"/>
+                                        <rect key="frame" x="137.66666666666666" y="67" width="114.66666666666666" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="Uy9-Ch-JxB"/>
                                         </constraints>
@@ -817,13 +817,13 @@ Personal Data Processing</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please straight forwardly face the camera" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRx-Fp-zob">
-                                <rect key="frame" x="16" y="605" width="358" height="15.666666666666629"/>
+                                <rect key="frame" x="16" y="605" width="358" height="13"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTE:Note: Make sure to fit your face in the frame" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-mU-qg0">
-                                <rect key="frame" x="16" y="742.33333333333337" width="358" height="15.666666666666629"/>
+                                <rect key="frame" x="16" y="743.66666666666663" width="358" height="13"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -895,7 +895,7 @@ Personal Data Processing</string>
         <!--Success View Controller-->
         <scene sceneID="gUU-0r-Lqb">
             <objects>
-                <viewController storyboardIdentifier="SuccessViewController" id="P71-rK-ybk" customClass="SuccessViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessViewController" id="P71-rK-ybk" customClass="SuccessViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O8k-8Z-bvI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -924,13 +924,13 @@ Personal Data Processing</string>
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="587"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7oL-oO-DPZ">
-                                                <rect key="frame" x="39" y="105.66666666666666" width="312" height="275.66666666666674"/>
+                                                <rect key="frame" x="39" y="112.66666666666666" width="312" height="261.66666666666674"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-Zj-6hX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="159.33333333333334"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="159.66666666666666"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success_icon" translatesAutoresizingMaskIntoConstraints="NO" id="D5V-Sv-1p0">
-                                                                <rect key="frame" x="98.666666666666657" y="45.000000000000021" width="114.66666666666666" height="114.33333333333331"/>
+                                                                <rect key="frame" x="98.666666666666657" y="45.000000000000036" width="114.66666666666666" height="114.66666666666669"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="D5V-Sv-1p0" secondAttribute="height" multiplier="1:1" id="7lO-oJ-xHl"/>
                                                                 </constraints>
@@ -952,7 +952,7 @@ Personal Data Processing</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajb-qG-dbc">
-                                                        <rect key="frame" x="0.0" y="175.33333333333334" width="312" height="67.333333333333343"/>
+                                                        <rect key="frame" x="0.0" y="175.66666666666666" width="312" height="56"/>
                                                         <string key="text">Verification Scan 
 Successfully!</string>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
@@ -960,7 +960,7 @@ Successfully!</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation your identify successfully verified" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD5-0W-Rwd">
-                                                        <rect key="frame" x="0.0" y="258.66666666666663" width="312" height="17"/>
+                                                        <rect key="frame" x="0.0" y="247.66666666666666" width="312" height="13.999999999999972"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1050,7 +1050,7 @@ Successfully!</string>
         <!--Popup View Controller-->
         <scene sceneID="8EK-rG-fQJ">
             <objects>
-                <viewController storyboardIdentifier="PopupViewController" id="SuO-MG-Xhu" customClass="PopupViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopupViewController" id="SuO-MG-Xhu" customClass="PopupViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H4w-yX-eyY">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1060,7 +1060,7 @@ Successfully!</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrK-j5-KmL">
-                                <rect key="frame" x="0.0" y="844.00000000000011" width="390" height="464.33333333333337"/>
+                                <rect key="frame" x="0.0" y="843.99999999999989" width="390" height="456.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyY-Aj-i9t">
                                         <rect key="frame" x="344" y="20" width="30" height="30"/>
@@ -1082,7 +1082,7 @@ Successfully!</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuX-wv-cWX">
-                                        <rect key="frame" x="101" y="137" width="188" height="45"/>
+                                        <rect key="frame" x="101" y="137" width="188" height="37.333333333333343"/>
                                         <string key="text">Full Identity Verfication
 Details</string>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
@@ -1090,7 +1090,7 @@ Details</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iF8-7k-7jF">
-                                        <rect key="frame" x="25" y="202" width="340" height="242.33333333333337"/>
+                                        <rect key="frame" x="25" y="194.33333333333326" width="340" height="242.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="242.33000000000001" id="gGB-fX-suz"/>
@@ -1143,7 +1143,7 @@ Details</string>
         <!--Scan Card Back View Controller-->
         <scene sceneID="f28-SN-aIE">
             <objects>
-                <viewController storyboardIdentifier="ScanCardBackViewController" id="nJV-nL-KjL" customClass="ScanCardBackViewController" customModule="KnowFace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanCardBackViewController" id="nJV-nL-KjL" customClass="ScanCardBackViewController" customModule="FaceGestureDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vgr-ab-OF5">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1172,16 +1172,16 @@ Details</string>
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJw-hX-WUE" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="97"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="92.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gje-bf-8X2">
-                                        <rect key="frame" x="118" y="67" width="154" height="28"/>
+                                        <rect key="frame" x="127.33333333333333" y="67" width="135.66666666666669" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlD-qO-7Ml">
-                                        <rect key="frame" x="16" y="66" width="30" height="30"/>
+                                        <rect key="frame" x="16" y="63.666666666666657" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="YlD-qO-7Ml" secondAttribute="height" multiplier="1:1" id="phJ-lC-Ags"/>
                                             <constraint firstAttribute="height" constant="30" id="shd-aX-jml"/>
@@ -1254,13 +1254,13 @@ Details</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Back Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WJ-BN-3kC">
-                                <rect key="frame" x="125.66666666666667" y="254.33333333333334" width="138.66666666666663" height="25.333333333333343"/>
+                                <rect key="frame" x="132" y="258.66666666666669" width="126.33333333333331" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place your  card within the frame and make sure it's clear with no reflections." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIP-x8-maN">
-                                <rect key="frame" x="59" y="564.33333333333337" width="272" height="31"/>
+                                <rect key="frame" x="59" y="564.33333333333337" width="272" height="25.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20760D1D4EB215814F93E2D0 /* Pods_FaceGestureDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0059023D932E105721FA1E92 /* Pods_FaceGestureDetection.framework */; };
+		3D4CC5D5292DFA7900431358 /* FaceGesturesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D4292DFA7900431358 /* FaceGesturesController.swift */; };
 		3D534FD5291E5F4E007224F3 /* FacialGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D534FD4291E5F4E007224F3 /* FacialGestureView.swift */; };
 		3D88A7F52924D1EF0040C724 /* blink_eyes_Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D88A7F32924D1EF0040C724 /* blink_eyes_Animation.json */; };
 		3D88A7F62924D1EF0040C724 /* smile_Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D88A7F42924D1EF0040C724 /* smile_Animation.json */; };
@@ -59,6 +60,7 @@
 		0059023D932E105721FA1E92 /* Pods_FaceGestureDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceGestureDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0376E0A0B25D2F6CC8578F75 /* Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig"; path = "Target Support Files/Pods-FaceGestureDetection-FaceGestureDetectionTests/Pods-FaceGestureDetection-FaceGestureDetectionTests.release.xcconfig"; sourceTree = "<group>"; };
 		245AEEECF15EFB07A243D5F1 /* Pods-FaceGestureDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDetection.release.xcconfig"; path = "Target Support Files/Pods-FaceGestureDetection/Pods-FaceGestureDetection.release.xcconfig"; sourceTree = "<group>"; };
+		3D4CC5D4292DFA7900431358 /* FaceGesturesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceGesturesController.swift; sourceTree = "<group>"; };
 		3D534FD4291E5F4E007224F3 /* FacialGestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialGestureView.swift; sourceTree = "<group>"; };
 		3D88A7F32924D1EF0040C724 /* blink_eyes_Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blink_eyes_Animation.json; sourceTree = "<group>"; };
 		3D88A7F42924D1EF0040C724 /* smile_Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smile_Animation.json; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE7E2E4291E81B40057EE5C /* FaceGestureDetectionViewController.swift */,
+				3D4CC5D4292DFA7900431358 /* FaceGesturesController.swift */,
 				3D97B657291CCD52009577BE /* BaseViewController.swift */,
 				3D97B658291CCD52009577BE /* IntroViewController.swift */,
 				3D88A7F92924D2230040C724 /* LivenessDetectionViewController.swift */,
@@ -472,6 +475,7 @@
 				3D97B676291CCF35009577BE /* LivenessDetectionOptionsTableViewCell.swift in Sources */,
 				3D97B67A291CCF35009577BE /* PopupDetailTableViewCell.swift in Sources */,
 				3D97B911291D0407009577BE /* MNISTClassifier.mlmodel in Sources */,
+				3D4CC5D5292DFA7900431358 /* FaceGesturesController.swift in Sources */,
 				3D97B684291CD125009577BE /* PopupModels.swift in Sources */,
 				3D97B662291CCD52009577BE /* IntroViewController.swift in Sources */,
 				3D534FD5291E5F4E007224F3 /* FacialGestureView.swift in Sources */,
@@ -667,6 +671,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FaceGestureDetection.app.FaceGestureDetection;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -712,6 +717,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FaceGestureDetection.app.FaceGestureDetection;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
